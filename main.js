@@ -2,7 +2,9 @@ import { colors } from "./colors.js";
 
 
 
-// Elements 
+
+
+
 const allCardsEl = document.querySelector('.cards')
 const body = document.querySelector('body')
 
@@ -19,45 +21,31 @@ const colorsCards = colors.map(( {rgb, hex} ) =>
 allCardsEl.insertAdjacentHTML('afterbegin', colorsCards)
 
 
+function cardHandler (e) {
 
+    const isColorBgEl = e.target.classList.contains('cards_bcg-color')
 
-
-function currentCard () {
-    
-    const cardHandler = (e) => {
-
-        const isColorBgEl = e.target.classList.contains('cards_bcg-color')
-
-        if(!isColorBgEl) {
-            return
-        }
-
-        const currentActiveCard = document.querySelector('.card-item.is-active')
-
-        if(currentActiveCard) {
-            currentActiveCard.classList.remove('is-active')
-        }
-
-        const bgEl = e.target.parentNode;
-        const parendCard = bgEl.closest('.card-item')
-
-        parendCard.classList.add('is-active')
-
-        const currentColor = e.target.dataset.color
-        body.style.backgroundColor = currentColor
-
-
-        
+    if(!isColorBgEl) {
+        return
     }
-        
+
+    currentActiveCard()
+
+    const bgEl = e.target.parentNode;
+    const parendCard = bgEl.closest('.card-item')
+    console.log(parendCard)
+    parendCard.classList.add('is-active')
 
 
-
-    allCardsEl.addEventListener('click', cardHandler)
+    const currentColor = e.target.dataset.color
+    body.style.backgroundColor = currentColor
 }
 
+function currentActiveCard () {
+    const currentActiveCard = document.querySelector('.card-item.is-active')
+    if(currentActiveCard) {
+        currentActiveCard.classList.remove('is-active')
+    }
+}
 
-
-
-
-currentCard()
+allCardsEl.addEventListener('click', cardHandler)
