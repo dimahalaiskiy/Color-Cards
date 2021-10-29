@@ -1,0 +1,54 @@
+body {
+    margin: 40px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 25px;
+}
+
+
+.card-item {
+    border-radius: 4px;
+    box-shadow: 4px 3px 13px -2px #848484;
+    transition: transform 0.8s;
+    cursor: pointer;
+    background-color: white;
+    outline: 2px solid white;
+}
+
+.card-item.is-active {
+    transform: scale(1.08);
+}
+
+.cards_bcg-color {
+    height: 170px;
+    border-radius: inherit;
+}
+
+.cards-text {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+
+/*# sourceMappingURL=index.de101254.css.map */

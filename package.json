@@ -1,0 +1,24 @@
+{
+  "name": "colorpicker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./index.html",
+    "build": "parcel build ./index.html --public-url /Color-Cards"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimahalaiskiy/Colors-Cards.git"
+  },
+  "author": "Dima Halaiskiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dimahalaiskiy/Colors-Cards/issues"
+  },
+  "homepage": "https://github.com/dimahalaiskiy/Colors-Cards#readme",
+  "dependencies": {
+    "handlebars": "^4.7.7",
+    "parcel": "^2.0.0"
+  }
+}
